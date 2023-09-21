@@ -5,7 +5,7 @@ import os
 from scheduler import Scheduler
 from apscheduler.schedulers.background import BackgroundScheduler
 
-TZ_INDIA = dt.timezone(dt.timedelta(hours=5.5))
+TZ_INDIA = dt.timezone(dt.timedelta(hours=2))
 
 
 def now():
