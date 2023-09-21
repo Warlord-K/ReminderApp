@@ -27,7 +27,7 @@ def send_mail(
     receiver_email="aptcyborg@gmail.com", subject="You need to do something!"
 ):
     print(f"Sending mail to {receiver_email} at {now()}")
-    port = 587  # For starttls
+    port = 2025  # For starttls
     smtp_server = "smtp.gmail.com"
     sender_email = "contactkhelogames@gmail.com"
     password = get_password()
