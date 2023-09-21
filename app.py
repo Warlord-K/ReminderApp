@@ -91,7 +91,7 @@ def set_reminder_specific(year, month, day, hour, minute, receiver_email, subjec
         send_mail,
         args=[receiver_email, subject],
     )
-    return now().year, now().month, now.day(), now().hour, now.minute(), "aptcyborg@gmail.com", None 
+    return now().year, now().month, now().day, now().hour, now().minute, "aptcyborg@gmail.com", None 
 
 with gr.Blocks() as offset:
     with gr.Row():
