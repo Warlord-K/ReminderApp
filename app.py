@@ -16,7 +16,7 @@ def get_password():
     try:
         password = open("password.txt", "r").read()
     except:
-        password = os.environ["password"]
+        password = os.environ['password']
     return password
 
 
