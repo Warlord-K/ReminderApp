@@ -71,7 +71,7 @@ def set_reminder_offset(
         send_mail,
         args=[receiver_email, subject],
     )
-
+    return 0, 0, 0, 0, 5, "aptcyborg@gmail.com", None
 
 def set_reminder_specific(year, month, day, hour, minute, receiver_email, subject):
     print(
@@ -88,7 +88,7 @@ def set_reminder_specific(year, month, day, hour, minute, receiver_email, subjec
         send_mail,
         args=[receiver_email, subject],
     )
-
+    return now().year, now().month, now.day(), now().hour, now.minute(), "aptcyborg@gmail.com", None 
 
 with gr.Blocks() as offset:
     with gr.Row():
@@ -102,7 +102,7 @@ with gr.Blocks() as offset:
         month = gr.Number(label="Month", value=0)
         day = gr.Number(label="day", value=0)
     btn = gr.Button(value="Set reminder")
-    btn.click(set_reminder_offset, [year, month, day, hour, minute, mail, subject], [])
+    btn.click(set_reminder_offset, [year, month, day, hour, minute, mail, subject], [year, month, day, hour, minute, mail, subject])
 
 with gr.Blocks() as specific:
     with gr.Row():
@@ -117,7 +117,7 @@ with gr.Blocks() as specific:
         year = gr.Number(label="Year", value=now().year)
     btn = gr.Button(value="Set reminder")
     btn.click(
-        set_reminder_specific, [year, month, day, hour, minute, mail, subject], []
+        set_reminder_specific, [year, month, day, hour, minute, mail, subject], [year, month, day, hour, minute, mail, subject]
     )
 
 
