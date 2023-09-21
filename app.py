@@ -48,6 +48,7 @@ schedule = Scheduler()
 
 
 def run_jobs():
+    print("Running jobs")
     schedule.exec_jobs()
 
 
