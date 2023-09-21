@@ -16,7 +16,10 @@ def get_password():
     try:
         password = open("password.txt", "r").read()
     except:
-        password = os.environ['password']
+        password = os.environ.get('password', None)
+    if password is None:
+        print(os.environ.keys())
+        print("Password not found")
     return password
 
 
